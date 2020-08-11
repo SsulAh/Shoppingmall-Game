@@ -23,16 +23,14 @@ function createHTML5String(item) {
 }
 
 function onButtonClick (event, items) {
-        const datset = evnet.target.dataset;
+        const dataset = event.target.dataset;
         const key = dataset.key;
         const value = dataset.value;
-
         if (key === null || value == null) {
             return;
         }
         const filtered = items.filter(item => item[key] === value);
-        console.log(filtered);
-        displayItems(items.filter)
+        displayItems(filtered);
 }
 
 function setEventListeners(items) {
@@ -45,5 +43,6 @@ function setEventListeners(items) {
 loadItems()
     .then(items => {
         displayItems(items);
+        setEventListeners(items);
     })
 .catch(console.log)

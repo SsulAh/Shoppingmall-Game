@@ -43,7 +43,7 @@
             "image": "../images/blue_t.png"
         },
         {
-            "type": "pants",
+            "type": "tshirt",
             "gender": "male",
             "size": "large",
             "color": "yellow",
